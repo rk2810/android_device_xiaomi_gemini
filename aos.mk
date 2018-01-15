@@ -19,6 +19,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Build telephony-ext 
+$(call inherit-product, vendor/aos/config/caf_fw.mk)
+
 # Inherit from gemini device
 $(call inherit-product, device/xiaomi/gemini/device.mk)
 
