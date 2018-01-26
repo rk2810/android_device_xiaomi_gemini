@@ -4,4 +4,4 @@ ro.hardware.fingerprint=fpc
 sys.fpc.tu.disabled=0
 
 # Maintainer prop
-ro.aos.maintainer=RohanK & Krzysztof Geralt
+ro.aos.maintainer=RohanK & MOVZX
