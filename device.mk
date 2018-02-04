@@ -38,11 +38,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ConfigPanel
 
-# Consumerir
+# Consumer IR
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service \
-    consumerir.msm8996
+    android.hardware.ir@1.0-service.xiaomi_8996
 
 # Device init scripts
 PRODUCT_PACKAGES += \
@@ -65,6 +63,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.romname=ATOMIC-OS \
+    ro.ota.version=$(shell date +"%Y%m%d") \
+    ro.ota.manifest=https://raw.githubusercontent.com/TeamDarkness-Devices/ota_devices/master/gemini.xml
 
 # TFA calibration
 PRODUCT_PACKAGES += \
